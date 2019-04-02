@@ -23,39 +23,31 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   });
 
 */
-function hof(arr, com, cb) {
-  return cb(arr, com);
-}
 
-const getLength = function(arr, length) {
-  return arr.length;
+
+function getLength(arr, cb) {
+  return cb(arr.length);
   // getLength passes the length of the array into the callback.
 }
+getLength(items, function(length) {
+  console.log(length)
+});
 
-const last = function(arr, last) {
-  return arr.pop();
+
+
+function last(arr, cb) {
   // last passes the last item of the array into the callback.
 }
 
-const sumNums = function(x, y, add) {
-  return x + y;
+function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 
-const multiplyNums = function(x, y, mult) {
-  return x * y;
+function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
 
-const contains = function(arr, item, contains) {
-  for(i=0; i < arr.length; i++) {
-    if (i===item) {
-      return true;
-      else {
-        return false;
-      }
-    }
-  }
+function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
