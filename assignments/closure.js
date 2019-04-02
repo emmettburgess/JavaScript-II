@@ -1,6 +1,20 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
+function series() {
+  const first = "The Lone and Level Sands";
+  console.log(`The first book is ${first}.`);
+  function book() {
+    const mc = "Tarlos";
+    console.log(`The main character is ${mc}.`);
+    function setting() {
+      const place = "Kesh";
+      console.log(`Tarlos is the king of ${place}.`);
+    }//setting
+    setting();
+  }//book
+  book();
+}//series
+series();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
